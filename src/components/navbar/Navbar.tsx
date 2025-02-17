@@ -13,7 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
       <div className="flex w-[80%] mx-auto h-full">
         <nav className="flex items-center justify-between w-full">
           <h1 className="flex-[0.6] cursor-pointer text-[25px] text-black">
-            ʕ•ᴥ•ʔ
+            ✩
           </h1>
           <div className="navbar-link" onClick={() => handleScroll(homeRef)}>
             Home
