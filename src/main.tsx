@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import App from "./App.tsx";
 import "./index.css";
 
@@ -7,10 +7,13 @@ import "@fontsource/outfit";
 import "@fontsource/roboto";
 import { ScrollProvider } from "./components/ScrollContext.tsx";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const root = document.getElementById("root");
+
+ReactDOM.render(
   <React.StrictMode>
     <ScrollProvider>
       <App />
     </ScrollProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  root
 );
