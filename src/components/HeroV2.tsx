@@ -9,7 +9,7 @@ export const HeroV2 = () => {
             className="md:w-full md:h-full object-cover absolute inset-0 m-auto"
           />
         </div>
-        <div className="md:pb-[1rem]">
+        <div className="pb-[1rem]">
           <h1 className="text-[3vh] md:text-[2rem] lg:text-[2.25rem] text-black text-center">
             grace
             <span className="text-black font-bold"> carandang</span>
