@@ -41,25 +41,22 @@ export const ExperienceDetails = ({
         {details.map((detail, i) => (
           <div key={`task_${i}`}>
             <div className="flex items-center md:gap-10">
-              <p className="text-[1rem] md:text-[1.1rem] lg:text-[1.25rem] text-black">
+              <p className="text-[0.8rem] md:text-[1.1rem] lg:text-[1.25rem] text-black">
                 {detail.task}
               </p>
             </div>
-            <div className="mb-8 flex items-center gap-2 md:gap-4 pt-2">
+            <div className="mb-8 flex flex-wrap items-center gap-2 md:gap-4 pt-2">
               {detail.technologies.length > 0 && (
                 <>
-                  {/* <span className="w-[4px] h-6 bg-[#626b8c] rounded-full"></span> */}
                   {detail.technologies.map((tech, i) => (
                     <p
                       key={`tech_${i}`}
-                      className="text-[0.7rem] md:text-[0.7rem] lg:text-[1rem] font-semibold text-white bg-black bg-opacity-80 px-3 py-1 rounded-full"
+                      className="text-[0.7rem] lg:text-[1rem] font-semibold text-white bg-black bg-opacity-90 px-3 py-1 rounded-full
+          h-[1.75rem] flex items-center justify-center"
                     >
                       {tech}
                     </p>
                   ))}
-                  {/* <p className="text-lg font-semibold text-black bg-[#626b8c] bg-opacity-30 px-3 py-1 rounded-md tracking-wide">
-                    {detail.technologies}
-                  </p> */}
                 </>
               )}
             </div>
