@@ -10,7 +10,6 @@ export const AboutV2 = () => {
   );
 
   return (
-    // <div>
     <div className="w-[80%] mx-auto flex flex-col md:flex-row gap-8 relative">
       <div className="mx-auto flex flex-col w-full md:w-2/3 justify-center">
         {Object.values(experienceList).map((experience, i) => (

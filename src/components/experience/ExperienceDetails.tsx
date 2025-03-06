@@ -29,11 +29,9 @@ export const ExperienceDetails = ({
         ref={experienceRef}
         className="flex flex-col items-start justify-center md:h-[100vh] mx-auto w-full"
       >
-        {experience.endDate && (
-          <h1 className="font-semibold block md:hidden text-[1rem] text-black">
-            {experience.jobTitle} [{experience.company}]
-          </h1>
-        )}
+        <h1 className="font-semibold block md:hidden text-[1rem] text-black">
+          {experience.jobTitle} [{experience.company}]
+        </h1>
         <h1 className="block md:hidden text-[0.8rem] text-black">
           {experience.startDate} - {experience.endDate ?? "Present"}
         </h1>
