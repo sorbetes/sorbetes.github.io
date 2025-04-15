@@ -16,10 +16,10 @@ export const ExperienceHeading = ({
       <p className=" text-[2rem] md:text-[2.5rem] font-semibold text-black">
         {company}
       </p>
-      <p className="text-[1.5rem] md:text-[2rem] font-medium text-black">
+      <p className="text-[1rem] md:text-[1.5rem] font-medium text-black">
         {jobTitle}
       </p>
-      <p className="text-[1.5rem] md:text-[2rem] font-light text-black">
+      <p className="text-[1rem] md:text-[1.5rem] font-light text-black">
         {startDate} - {endDate ?? "Present"}
       </p>
     </div>
