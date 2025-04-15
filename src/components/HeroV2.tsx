@@ -11,8 +11,7 @@ export const HeroV2 = () => {
         </div>
         <div className="pb-[1rem]">
           <h1 className="text-[2.5vh] md:text-[2rem] lg:text-[2.25rem] text-black text-center">
-            grace
-            <span className="text-black font-bold"> carandang</span>
+            grace carandang
           </h1>
           <h1 className="w-[80%] text-[2.5vh] md:text-[2.5rem] lg:text-[3rem] text-black font-bold text-center mx-auto">
             dedicated to simplifying the complicated.
