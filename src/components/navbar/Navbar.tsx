@@ -12,9 +12,7 @@ export const Navbar: React.FC<NavbarProps> = ({}) => {
     <div className="hidden md:block fixed top-0 w-full h-[7vh] z-[10000] bg-[rgba(209, 217, 230, 0.5)] shadow-md backdrop-blur-xl">
       <div className="flex w-[80%] mx-auto h-full">
         <nav className="flex items-center justify-between w-full">
-          <h1 className="flex-[0.6] cursor-pointer text-[25px] text-black">
-            ✩
-          </h1>
+          <h1 className="flex-[0.6] text-[25px] text-black"></h1>
           <div className="navbar-link" onClick={() => handleScroll(homeRef)}>
             Home
           </div>
