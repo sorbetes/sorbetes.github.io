@@ -30,7 +30,7 @@ export const Contact = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="https://cdn.simpleicons.org/linkedin/black"
+            src="https://img.icons8.com/?size=100&id=8808&format=png&color=000000"
             alt="LinkedIn"
             className="w-8 h-8 hover:opacity-75 transition"
           />
