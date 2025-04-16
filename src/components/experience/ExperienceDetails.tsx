@@ -49,8 +49,7 @@ export const ExperienceDetails = ({
                   {detail.technologies.map((tech, i) => (
                     <p
                       key={`tech_${i}`}
-                      className="text-[0.7rem] lg:text-[1rem] font-semibold text-white bg-black bg-opacity-90 px-3 py-1 rounded-full
-          h-[1.75rem] flex items-center justify-center"
+                      className="text-[0.7rem] lg:text-[1rem] font-semibold text-black bg-transparent border border-black px-3 py-1 rounded-full h-[1.75rem] flex items-center justify-center"
                     >
                       {tech}
                     </p>
