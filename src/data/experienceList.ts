@@ -48,4 +48,16 @@ export const experienceList: Record<string, ExperienceViewModel> = {
       },
     ],
   },
+  baCollege: {
+    jobTitle: "Electronic and Computer Engineering",
+    company: "Trinity College Dublin",
+    startDate: "2013",
+    endDate: "2017",
+    details: [
+      {
+        task: "Graduated.",
+        technologies: ["2.1"],
+      },
+    ],
+  },
 };
