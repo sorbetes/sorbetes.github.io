@@ -18,6 +18,13 @@ export const AboutV2 = () => {
               experience={experience}
               setExperience={setExperience}
             ></ExperienceDetails>
+            {/* {Object.keys(experienceList).length !== i + 1 && (
+              <div className="w-1/3 mx-auto flex items-center gap-4">
+                <div className="h-[2px] flex-1 bg-black/30" />
+                <span className="w-2 h-2 rounded-full bg-black" />
+                <div className="h-[2px] flex-1 bg-black/30" />
+              </div>
+            )} */}
           </div>
         ))}
       </div>
