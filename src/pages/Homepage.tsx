@@ -1,7 +1,7 @@
 import WatercolorBackground from "../components/background/WatercolourBackground";
-import { Contact } from "../components/Contact";
+import { Contact } from "../components/contact/Contact";
 import { AboutV2 } from "../components/experience/AboutV2";
-import { HeroV2 } from "../components/HeroV2";
+import { HeroV2 } from "../components/hero/HeroV2";
 import { Navbar } from "../components/navbar/Navbar";
 import { useScrollContext } from "../components/ScrollContext";
 
