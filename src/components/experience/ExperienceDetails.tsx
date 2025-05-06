@@ -28,17 +28,17 @@ export const ExperienceDetails = ({
       ref={experienceRef}
       className="flex flex-col items-start justify-center md:h-[100vh] mx-auto w-full"
     >
-      <h1 className="font-semibold block md:hidden text-[1rem] text-black">
+      <h1 className="font-semibold block md:hidden text-[1rem] text-[#f4f1ed]">
         {experience.jobTitle} [{experience.company}]
       </h1>
-      <h1 className="block md:hidden text-[0.8rem] text-black">
+      <h1 className="block md:hidden text-[0.8rem] text-[#f4f1ed]">
         {experience.startDate} - {experience.endDate ?? "Present"}
       </h1>
-      <p className="block md:hidden text-[2rem] font-medium text-black mx-auto"></p>
+      <p className="block md:hidden text-[2rem] font-medium text-[#f4f1ed] mx-auto"></p>
       {details.map((detail, i) => (
         <div key={`task_${i}`}>
           <div className="flex items-center md:gap-10">
-            <p className="text-[0.8rem] md:text-[1.1rem] lg:text-[1.25rem] text-black">
+            <p className="text-[0.8rem] md:text-[1.1rem] lg:text-[1.25rem] text-[#f4f1ed]">
               {detail.task}
             </p>
           </div>
@@ -48,7 +48,7 @@ export const ExperienceDetails = ({
                 {detail.technologies.map((tech, i) => (
                   <p
                     key={`tech_${i}`}
-                    className="text-[0.7rem] lg:text-[1rem] font-semibold text-black bg-transparent border border-black px-3 py-1 rounded-full h-[1.75rem] flex items-center justify-center"
+                    className="text-[0.7rem] lg:text-[1rem] font-semibold text-[#f4f1ed] bg-transparent border border-[#f4f1ed] px-3 py-1 rounded-full h-[1.75rem] flex items-center justify-center"
                   >
                     {tech}
                   </p>

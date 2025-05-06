@@ -1,25 +1,39 @@
-import WatercolorBackground from "../components/background/WatercolourBackground";
+import { AboutMe } from "../components/about/AboutMe";
 import { Contact } from "../components/contact/Contact";
-import { AboutV2 } from "../components/experience/AboutV2";
+import { Experience } from "../components/experience/Experience";
 import { HeroV2 } from "../components/hero/HeroV2";
 import { Navbar } from "../components/navbar/Navbar";
 import { useScrollContext } from "../components/ScrollContext";
 
 export default function HomePage() {
-  const { homeRef, experienceRef, contactRef } = useScrollContext();
+  const { homeRef, aboutMeRef, experienceRef, contactRef } = useScrollContext();
 
   return (
     <div>
-      <WatercolorBackground />
       <div className="font-primary select-none">
         <Navbar />
-        <div ref={homeRef} id="homeRef">
+        <div style={{ backgroundColor: "#f4f1ed" }} ref={homeRef} id="homeRef">
           <HeroV2 />
         </div>
-        <div ref={experienceRef} id="experienceRef">
-          <AboutV2 />
+        <div
+          style={{ backgroundColor: "#d9aab2" }}
+          ref={aboutMeRef}
+          id="aboutMeRef"
+        >
+          <AboutMe />
         </div>
-        <div ref={contactRef} id="contactRef">
+        <div
+          style={{ backgroundColor: "#657084" }}
+          ref={experienceRef}
+          id="experienceRef"
+        >
+          <Experience />
+        </div>
+        <div
+          style={{ backgroundColor: "#f4f1ed" }}
+          ref={contactRef}
+          id="contactRef"
+        >
           <Contact />
         </div>
       </div>

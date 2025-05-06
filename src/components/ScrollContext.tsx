@@ -2,6 +2,7 @@ import React, { createContext, useContext, useRef, ReactNode } from "react";
 
 interface ScrollContextType {
   homeRef: React.RefObject<HTMLDivElement>;
+  aboutMeRef: React.RefObject<HTMLDivElement>;
   experienceRef: React.RefObject<HTMLDivElement>;
   contactRef: React.RefObject<HTMLDivElement>;
 }
@@ -14,11 +15,13 @@ const ScrollContext = createContext<ScrollContextType | undefined>(undefined);
 
 export const ScrollProvider: React.FC<ScrollProviderProps> = ({ children }) => {
   const homeRef = useRef<HTMLDivElement>(null);
+  const aboutMeRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
   const value = {
     homeRef,
+    aboutMeRef,
     experienceRef,
     contactRef,
   };

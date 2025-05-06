@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { randomColor } from "../../utils/colorUtils";
 
 const WatercolorBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -9,18 +10,31 @@ const WatercolorBackground = () => {
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
 
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
+    let width = canvas.offsetWidth;
+    let height = canvas.offsetHeight;
+    canvas.width = width;
+    canvas.height = height;
 
     const resizeCanvas = () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      const canvas = canvasRef.current;
+      if (!canvas || !ctx) return;
 
-      if (!initialized) {
-        ctx?.clearRect(0, 0, width, height);
-        ctx!.fillStyle = "#FFF";
-        ctx!.fillRect(0, 0, width, height);
-      }
+      const rect = canvas.getBoundingClientRect();
+
+      // Save existing content
+      const oldWidth = canvas.width;
+      const oldHeight = canvas.height;
+      const imageData = ctx.getImageData(0, 0, oldWidth, oldHeight);
+
+      // Match canvas resolution to CSS size
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.putImageData(imageData, 0, 0);
+
+      width = rect.width;
+      height = rect.height;
     };
 
     window.addEventListener("resize", resizeCanvas);
@@ -30,12 +44,6 @@ const WatercolorBackground = () => {
 
     function randomWiggle(wiggle: number) {
       return Math.random() * wiggle * (Math.random() < 0.5 ? -1 : 1);
-    }
-
-    let color = -25;
-    function randomColor() {
-      color = Math.floor((color % 360) + 25 + 15 * Math.random());
-      return `hsl(${color}, 50%, 55%)`;
     }
 
     class WaterColor {
@@ -147,31 +155,40 @@ const WatercolorBackground = () => {
     }
 
     function makeWatercolor(e?: MouseEvent | TouchEvent) {
-      const x = e
-        ? e instanceof MouseEvent
-          ? e.clientX
-          : e.touches[0].clientX
-        : Math.random() * width;
-      const y = e
-        ? e instanceof MouseEvent
-          ? e.clientY
-          : e.touches[0].clientY
-        : Math.random() * height;
+      const rect = canvasRef.current?.getBoundingClientRect();
+      if (rect) {
+        const x = e
+          ? e instanceof MouseEvent
+            ? e.clientX - rect.left
+            : e.touches[0].clientX - rect.left
+          : Math.random() * width;
 
-      ctx?.setTransform(1, 0, 0, 1, 0, 0);
-      ctx!.fillStyle = "#FFF";
-      ctx!.globalAlpha = 0.02;
-      ctx!.fillRect(0, 0, width, height);
+        const y = e
+          ? e instanceof MouseEvent
+            ? e.clientY - rect.top
+            : e.touches[0].clientY - rect.top
+          : Math.random() * height;
 
-      new WaterColor(
-        ctx,
-        x,
-        y,
-        Math.min(width, height) * (0.2 + Math.random() * 0.1)
-      );
+        ctx?.setTransform(1, 0, 0, 1, 0, 0);
+        ctx!.fillStyle = "#FFF";
+        ctx!.globalAlpha = 0.02;
+        ctx!.fillRect(0, 0, width, height);
+
+        new WaterColor(
+          ctx,
+          x,
+          y,
+          Math.min(width, height) * (0.2 + Math.random() * 0.1)
+        );
+      }
     }
 
     function initializeWatercolor(e: MouseEvent | TouchEvent) {
+      const target = e.target as HTMLElement;
+      const validSection =
+        target.closest("#herov2") || target.className === "navbar-link";
+
+      if (!validSection) return;
       if (!initialized) {
         setInitialized(true);
       }
@@ -191,7 +208,7 @@ const WatercolorBackground = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed top-0 left-0 w-full h-full z-[-1]"
+      className="absolute top-0 left-0 w-full h-full z-11"
     />
   );
 };

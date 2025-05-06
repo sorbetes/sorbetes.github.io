@@ -1,7 +1,7 @@
 import { useScrollContext } from "../ScrollContext";
 
 export const Navbar = () => {
-  const { homeRef, experienceRef, contactRef } = useScrollContext();
+  const { homeRef, aboutMeRef, experienceRef, contactRef } = useScrollContext();
   const handleScroll = (ref: any) => {
     ref.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
@@ -13,6 +13,9 @@ export const Navbar = () => {
           <h1 className="flex-[0.8]"></h1>
           <div className="navbar-link" onClick={() => handleScroll(homeRef)}>
             Home
+          </div>
+          <div className="navbar-link" onClick={() => handleScroll(aboutMeRef)}>
+            About Me
           </div>
           <div
             className="navbar-link"
