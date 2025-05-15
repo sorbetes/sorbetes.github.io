@@ -36,7 +36,7 @@ export const experienceList: Record<string, ExperienceViewModel> = {
     details: [
       {
         task: "Configuration of Fenergo Framework based on C#.Net technology.",
-        technologies: [],
+        technologies: ["C#.NET", "SQL"],
       },
       {
         task: "Collaborated with the QA team to manage the test cycle, addressing and resolving bugs and other issues.",
