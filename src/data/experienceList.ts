@@ -7,26 +7,30 @@ export const experienceList: Record<string, ExperienceViewModel> = {
     startDate: "2021",
     details: [
       {
-        task: "Design, build, and maintain scalable APIs, services, and systems for Fenergo’s cloud-based platform.",
+        task: "Designing and maintaining cloud-based CLM solutions that help financial institutions meet compliance requirements and deliver streamlined digital onboarding experiences, with a focus on Document Management, Ownership and Control, and Agent workflows.",
+        technologies: [],
+      },
+      {
+        task: "👩🏽‍💻 Develop robust APIs, backend services, and user-facing interfaces for Fenergo’s SaaS platform.",
         technologies: ["C#.NET", "TypeScript", "React"],
       },
       {
-        task: "Develop and maintain automated testing to ensure high performance, reliability, and maintainability.",
+        task: "🧪 Implement and maintain automated testing to ensure performance, reliability, and maintainability.",
         technologies: ["Cypress", "Jest"],
       },
       {
-        task: "Manage cloud infrastructure and deployments, optimizing system reliability and scalability.",
+        task: "☁️ Manage and optimize cloud infrastructure and deployments with a focus on reliability, scalability, and automation.",
         technologies: ["Azure DevOps", "Pulumi", "Amazon Web Services"],
       },
       {
-        task: "Implement and maintain event-driven architectures, leveraging modern software patterns for scalability and consistency.",
+        task: "🪅 Build event-driven systems using modern architectural patterns.",
         technologies: ["CQRS", "Event Sourcing"],
       },
       {
-        task: "Diagnose and resolve production issues, ensuring system reliability and participating in on-call rotations for rapid incident response.",
+        task: "💥 Troubleshoot and resolve production issues promptly; participate in on-call rotations for incident response.",
         technologies: [],
       },
-    ],
+    ]
   },
   fenergoIntern: {
     jobTitle: "Intern / Technical Consultant",
@@ -35,15 +39,15 @@ export const experienceList: Record<string, ExperienceViewModel> = {
     endDate: "2021",
     details: [
       {
-        task: "Configuration of Fenergo Framework based on C#.Net technology.",
+        task: "💻 Configuration of Fenergo Framework based on C#.Net technology.",
         technologies: ["C#.NET", "SQL"],
       },
       {
-        task: "Collaborated with the QA team to manage the test cycle, addressing and resolving bugs and other issues.",
+        task: "👯 Collaborated with the QA team to manage the test cycle, addressing and resolving bugs and other issues.",
         technologies: [],
       },
       {
-        task: "Created and executed test cases, and developed tools to automate testing.",
+        task: "🔨 Created and executed test cases, and developed tools to automate testing.",
         technologies: ["TFS/Azure DevOps", "Postman", "Jenkins"],
       },
     ],
@@ -55,8 +59,8 @@ export const experienceList: Record<string, ExperienceViewModel> = {
     endDate: "2017",
     details: [
       {
-        task: "Graduated.",
-        technologies: ["2.1"],
+        task: "🎓 Graduated.",
+        technologies: [],
       },
     ],
   },
