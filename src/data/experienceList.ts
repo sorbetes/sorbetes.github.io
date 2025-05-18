@@ -7,7 +7,7 @@ export const experienceList: Record<string, ExperienceViewModel> = {
     startDate: "2021",
     details: [
       {
-        task: "Designing and maintaining cloud-based CLM solutions that help financial institutions meet compliance requirements and deliver streamlined digital onboarding experiences, with a focus on Document Management, Ownership and Control, and Agent workflows.",
+        task: "Design and maintain cloud-based CLM solutions that help financial institutions meet compliance requirements and deliver streamlined digital onboarding experiences, with a focus on Document Management, Ownership and Control, and Agent workflows.",
         technologies: [],
       },
       {
@@ -28,7 +28,7 @@ export const experienceList: Record<string, ExperienceViewModel> = {
       },
       {
         task: "💥 Troubleshoot and resolve production issues promptly; participate in on-call rotations for incident response.",
-        technologies: [],
+        technologies: ["PagerDuty"],
       },
     ]
   },
